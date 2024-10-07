@@ -29,7 +29,7 @@ function plotResults(results,parameters,style)
         rate(rate<0)=0; %truncate the R<0 data points
 
         handleF=figure(1);
-        set(handleF,'Position',[800,600,800,600]);
+        set(handleF,'Position',[100,100,600,600]);
         
         if(dim==1)
             %1-D plot

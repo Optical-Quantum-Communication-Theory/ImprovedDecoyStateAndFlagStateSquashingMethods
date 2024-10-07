@@ -54,7 +54,7 @@ results=mainIteration(protocolDescription,channelModel,leakageEC,parameters,solv
 %%%%%%%%%%%%%%%%%%%%% Output Results %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %save the results to file
-save('output.mat','results','parameters');
+%save('output.mat','results','parameters');
 
 % %can also load a previous session's result to plot it
 % %(can comment out main iteration above to skip computation)

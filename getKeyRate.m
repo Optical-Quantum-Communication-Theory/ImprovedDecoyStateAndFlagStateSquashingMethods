@@ -18,8 +18,8 @@ function [lowerBound, upperBound, FWBound, debugInfo]=getKeyRate(protocolDescrip
 
     tstart_iteration = tic;
     try
-        cvx_solver(solverOptions.globalSetting.cvxSolver);
-        cvx_precision(solverOptions.globalSetting.cvxPrecision);
+        % cvx_solver(solverOptions.globalSetting.cvxSolver);
+        % cvx_precision(solverOptions.globalSetting.cvxPrecision);
         if(solverOptions.globalSetting.verboseLevel==3)
             cvx_quiet(false);
         else

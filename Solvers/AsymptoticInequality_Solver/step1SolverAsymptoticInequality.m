@@ -142,6 +142,8 @@ function deltaRho = subproblem(rho,observables,expectations,LCertObs,LUncObs,gra
     
     n = size(rho,1);
     cvx_begin sdp
+        cvx_solver Mosek
+        cvx_precision high
         variable deltaRho(n,n) hermitian
         minimize real(trace(transpose(gradf)*deltaRho))
 
@@ -149,8 +151,8 @@ function deltaRho = subproblem(rho,observables,expectations,LCertObs,LUncObs,gra
             abs(trace(CertObs{i}'*(rho + deltaRho)) - CertExp(i)) <= options.linearconstrainttolerance;
         end
         for i = 1:LUncObs
-            trace(UncObs{i}'*(rho + deltaRho)) <= UncExpU(i)+options.linearconstrainttolerance;
-            trace(UncObs{i}'*(rho + deltaRho)) >= UncExpL(i)-options.linearconstrainttolerance;
+            real(trace(UncObs{i}'*(rho + deltaRho))) <= UncExpU(i)+options.linearconstrainttolerance;
+            real(trace(UncObs{i}'*(rho + deltaRho))) >= UncExpL(i)-options.linearconstrainttolerance;
         end
         rho + deltaRho == hermitian_semidefinite(n);
     cvx_end
@@ -176,6 +178,8 @@ function rho = closestDensityMatrix(rho0,observables,expectations,LCertObs,LUncO
     
     dim = size(rho0,1);
     cvx_begin sdp
+        cvx_solver Mosek
+        cvx_precision high
         variable rho(dim,dim) hermitian semidefinite
         if options.initmethod == 1
             minimize norm(rho0-rho)
