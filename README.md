@@ -1,4 +1,4 @@
-# Paper release Template (Replace with the title of the paper.)
+# Improved Decoy-state and Flag-state Squashing Methods
 
 This is a public version of the code used in Improved Decoy-state and Flag-state Squashing Methods \[[Arxiv](https://arxiv.org/abs/2405.05069)\]. This was built for a modified version of openQKDsecurity v1.0 and all changes have been included in this repository.
 
