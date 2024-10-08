@@ -18,7 +18,7 @@ The functions below are required to generate the plots in the paper. For each pl
 1. Comment out the parameters with two decoy intensities in the preset file,
 2. Comment out the variable names with two decoy intesities in the channel function,
 3. Comment out the variable 'decoys' containing two decoy intensities.
-4. 
+
 Here are the specific minor modificaitons required to reproduce the figures in the paper.
 
 ### Figure 1
