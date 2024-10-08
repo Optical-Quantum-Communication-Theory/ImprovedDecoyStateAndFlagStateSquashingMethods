@@ -10,13 +10,15 @@ This is a public version of the code used in Improved Decoy-state and Flag-state
 2. Follow all further [install instructions](/openQKDsecurityV1/README.md).
 3. Also follow the additional Mosek install instructions if you want an exact match.
 
+
+
+## Figure Instructions
+
 The functions below are required to generate the plots in the paper. For each plot we describe below which settings need to be chosen. For all plots the change from two to one decoy intensity is done as follows
 1. Comment out the parameters with two decoy intensities in the preset file,
 2. Comment out the variable names with two decoy intesities in the channel function,
 3. Comment out the variable 'decoys' containing two decoy intensities.
-
-## Figure Instructions
-
+4. 
 Here are the specific minor modificaitons required to reproduce the figures in the paper.
 
 ### Figure 1
