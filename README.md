@@ -26,7 +26,7 @@ Requires functions `Main_BB84` and `pmBB84WCP_nodecoy` for the correct parameter
 Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters and `pmBB84WCPChannel_Choi` (yellow stars), `pmBB84WCPChannel` (green diamonds and red circles) for different decoy-state methods.
 
 ### Figure 3
-Same as figure 2.
+This uses the same data as in figure 2.
 
 ### Figure 7
 Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the simple squasher [2, 3] and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same (up to small differences) key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel_Flag_Reduced` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
