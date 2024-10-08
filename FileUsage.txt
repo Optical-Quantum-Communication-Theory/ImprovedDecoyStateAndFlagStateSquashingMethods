@@ -33,6 +33,7 @@ pmSixStateWCP_decoy_Flag: preset for six-state protocol with decoy state with eq
 pmSixStateLossyDescription_Flag_Reduced: description file for six-state protocol with decoy states and the flag-state squasher from Theorem 1 together with Eq. (78)
 pmSixStateWCPChannel_Flag_Reduced: Channel model for six-state protocol implementing decoy analysis from Wang et.al. with flag-state squasher
 pmSixStateWCPChannel_Flag_improved: Channel model for six-state protocol using improved decoy methods with flag-state squasher
+pmSixStateWCPChannel_Flag_nodecoy: Channel model for six-state protocol with no decoy intensities using results from Rusca et. al., i.e. e_0 = 1/2
 
 
 different intensities:
