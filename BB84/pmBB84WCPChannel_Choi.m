@@ -35,8 +35,9 @@ function channelModel = pmBB84WCPChannel_Choi(protocolDescription,names,p)
     
     %%%%%%%%%%%%%%%%%%%%% user-supplied channel model begin %%%%%%%%%%%%%%%%%%%%%%%%%
     
-    %decoys = [mu1,mu2,mu3];
-    decoys = [mu1,mu2];
+    decoys = [mu1,mu2,mu3];
+    % decoys = [mu1,mu2];
+    
     dimA = protocolDescription.dimensions(1);
     dimB = protocolDescription.dimensions(2);
     nDecoys = length(decoys);
