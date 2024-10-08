@@ -17,7 +17,7 @@ Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters 
 Same as figure 2.
 
 ## Figure 7
-Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the Qubit squasher and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B =1/3$ and the decoy state methods from `pmSixStateWCPChannel` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
+Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the Qubit squasher and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
 
 ## Figure 8
 
