@@ -17,13 +17,13 @@ Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters 
 Same as figure 2.
 
 ## Figure 7
-Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the Qubit squasher and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same (up to small differences) key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel_Flag_Reduced` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
+Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the simple squasher [2, 3] and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same (up to small differences) key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel_Flag_Reduced` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
 
 ## Figure 8
 `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$ and the decoy state methods from `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red stars). The file `pmSixStateWCPChannel_Flag_Reduced` is used for the standard decoy methods, creating the curve with green circles.
 
 ## Figure 9
-`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$, commenting out all unncessary decoy intensities. The files `pmSixStateWCPChannel_Flag_improved` and  `pmSixStateWCPChannel_Flag_nodecoy` create the curves using the improved decoy methods from this work and applying $e_0 = 1/2$ from Rusca et. al., respectively.
+`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$, commenting out all unncessary decoy intensities. The files `pmSixStateWCPChannel_Flag_improved` and  `pmSixStateWCPChannel_Flag_nodecoy` create the curves using the improved decoy methods from this work and applying $e_0 = 1/2$ from Rusca et. al. [1], respectively.
 
 ## Figure 10
 `Main_SixState_Flag`, `pmSixStateWCP_decoy_Flag_dif_int` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$. The description file `pmSixStateLossyDescription_Flag_dif_int` and the channel `pmSixStateWCPChannel_Flag_dif_int` are required for the curves **without** a bit bias. The description file `pmSixStateLossyDescription_Flag_bit_bias` and the channel `pmSixStateWCPChannel_Flag_bit_bias` are required for the curves **with** a bit bias.
@@ -38,7 +38,7 @@ Same as figure 10, but each key rate curve is divided by the sigle photon probab
 ### no decoy:
 - `pmBB84WCP_nodecoy`: preset for decoy analysis without decoy intensities
 - `pmBB84WCPChannel_Choi_nodecoy`: channel for no decoy intensities using improved decoy methods
-- `pmBB84WCPChannel_constr_nodecoy`: channel for no decoy intensities using results from Rusca et. al., i.e. e_0 = 1/2
+- `pmBB84WCPChannel_constr_nodecoy`: channel for no decoy intensities using results from Rusca et. al. [1], i.e. e_0 = 1/2
 
 ### decoy:
 - `pmBB84WCP_decoy`: preset for BB84 protocol with decoy states
@@ -46,12 +46,12 @@ Same as figure 10, but each key rate curve is divided by the sigle photon probab
 
 ## Six-State:
 
-### Qubit squasher from Gittsovich et. al.:
-`Main_SixState`: main file for the six-state protocol with the squashing map from Gittsovich et. al.
+### Simple squasher from Refs [2, 3]:
+`Main_SixState`: main file for the six-state protocol with the squashing map from Refs [2, 3]
 
 - `pmSixStateWCP_decoy`: preset for six-state protocol with decoy state
 - `pmSixStateLossyDescription`: Description file for six-state protocol with decoy state
-- `pmSixStateWCPChannel`: Channel model for six-state protocol implementing decoy analysis from Wang et.al.
+- `pmSixStateWCPChannel`: Channel model for six-state protocol implementing decoy analysis from Wang et.al. [4]
 - `pmSixStateWCPChannel_improved_decoy`: Channel model for six-state protocol implementing improved decoy methods
 
 ### Flag-state squasher:
@@ -60,17 +60,17 @@ Same as figure 10, but each key rate curve is divided by the sigle photon probab
 #### equal intensities:
 - `pmSixStateWCP_decoy_Flag`: preset for six-state protocol with decoy state with equal intensities (clean and correct intervals)
 - `pmSixStateLossyDescription_Flag_Reduced`: description file for six-state protocol with decoy states and the flag-state squasher from Theorem 1 together with Eq. (78)
-- `pmSixStateWCPChannel_Flag_Reduced`: Channel model for six-state protocol implementing decoy analysis from Wang et. al. with flag-state squasher
+- `pmSixStateWCPChannel_Flag_Reduced`: Channel model for six-state protocol implementing decoy analysis from Wang et. al. [2] with flag-state squasher
 - `pmSixStateWCPChannel_Flag_improved`: Channel model for six-state protocol using improved decoy methods with flag-state squasher
-- `pmSixStateWCPChannel_Flag_nodecoy`: Channel model for six-state protocol with no decoy intensities using results from Rusca et. al., i.e. e_0 = 1/2
+- `pmSixStateWCPChannel_Flag_nodecoy`: Channel model for six-state protocol with no decoy intensities using results from Rusca et. al. [1], i.e. e_0 = 1/2
 
 
 #### different intensities:
 - `pmSixStateWCP_decoy_Flag_dif_int`: preset for six-state protocol with decoy state with different intensities (used with and without bit bias)
 - `pmSixStateLossyDescription_Flag_dif_int`: description file for six-state protocol with decoy states and different intensities
 - `pmSixStateLossyDescription_Flag_bit_bias`: description file for six-state protocol with decoy states and different intensities applying a bit bias
-- `pmSixStateWCPChannel_Flag_dif_int`: Channel model for six-state protocol using improved decoy methods or decoy analysis from Wang et. al. for different intensities
-- `pmSixStateWCPChannel_Flag_bit_bias`: Channel model for six-state protocol using improved decoy methods or decoy analysis from Wang et. al. for different intensities and applies a bit bias
+- `pmSixStateWCPChannel_Flag_dif_int`: Channel model for six-state protocol using improved decoy methods or decoy analysis from Wang et. al. [4] for different intensities
+- `pmSixStateWCPChannel_Flag_bit_bias`: Channel model for six-state protocol using improved decoy methods or decoy analysis from Wang et. al. [4] for different intensities and applies a bit bias
 
 
 ## Install instructions
@@ -81,3 +81,13 @@ Same as figure 10, but each key rate curve is divided by the sigle photon probab
 2. Follow all further [install instructions](/openQKDsecurityV1/README.md).
 3. Also follow the additional Mosek install instructions if you want an exact match.
 3. \<Install directions for this repository. For example, add this folder to the Matlab path and save. Run this test function. Etc.\>
+
+## References
+[1] D. Rusca, A. Boaron, F. Grünenfelder, A. Martin, and H. Zbinden, Finite-key analysis for the 1-decoy state QKD protocol, Applied Physics Letters 112, 171104 (2018).
+
+[2] O. Gittsovich, N. J. Beaudry, V. Narasimhachar, R. R. Alvarez, T. Moroder, and N. Lütkenhaus, Squashing model for detectors and applications to quantum-key-distribution protocols, Physical Review A 89, 012325 (2014).
+
+[3] N. J. Beaudry, T. Moroder, and N. Lütkenhaus, Squashing Models for Optical Measurements in Quantum Communication, Physical Review Letters 101, 093601 (2008).
+
+[4] W. Wang and N. Lütkenhaus, Numerical security proof for the decoy-state BB84 protocol and measurement-device-independent quantum key distribution resistant against large basis misalignment, Phys. Rev. Res. 4, 043097 (2022).
+
