@@ -223,7 +223,8 @@ function [Y1L,Y1U] = decoyAnalysis(decoys,decoy_expecfull)
                         Y <= 1;
                                                 
                         Y0 = M{1}*Y;
-
+                        
+                        %e_0 =1/2
                         Y0(1,2) + Y0(2,1) == 1/2*(Y0(1,1)+Y0(1,2)+Y0(2,1)+Y0(2,2));
                         Y0(3,4) + Y0(4,3) == 1/2*(Y0(3,3)+Y0(3,4)+Y0(4,3)+Y0(4,4));
 
@@ -240,7 +241,7 @@ function [Y1L,Y1U] = decoyAnalysis(decoys,decoy_expecfull)
                             for l=1:m
                                 sum(Yn(l,:)) == 1;
                             end
-                            %e_0 =1/2
+                            
                             Yn(1,2) + Yn(2,1) == 0;
                             Yn(3,4) + Yn(4,3) == 0;
                         end
@@ -275,7 +276,8 @@ function [Y1L,Y1U] = decoyAnalysis(decoys,decoy_expecfull)
                         Y <= 1;
 
                         Y0 = M{1}*Y;
-
+                        
+                        %e_0 =1/2
                         Y0(1,2) + Y0(2,1) == 1/2*(Y0(1,1)+Y0(1,2)+Y0(2,1)+Y0(2,2));
                         Y0(3,4) + Y0(4,3) == 1/2*(Y0(3,3)+Y0(3,4)+Y0(4,3)+Y0(4,4));
 
@@ -292,7 +294,7 @@ function [Y1L,Y1U] = decoyAnalysis(decoys,decoy_expecfull)
                             for l=1:m
                                 sum(Yn(l,:)) == 1;
                             end
-                            %e_0 =1/2
+                            
                             Yn(1,2) + Yn(2,1) == 0;
                             Yn(3,4) + Yn(4,3) == 0;
                         end
