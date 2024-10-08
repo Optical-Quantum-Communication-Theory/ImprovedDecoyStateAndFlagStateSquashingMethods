@@ -11,7 +11,7 @@ The functions below are required to generate the plots in the paper. For each pl
 Requires functions `Main_BB84` and `pmBB84WCP_nodecoy` for the correct parameters and `pmBB84WCPChannel_constr_nodecoy` (yellow triangle), `pmBB84WCPChannel_Choi_nodecoy` (red circles) for different decoy-state methods.
 
 ## Figure 2:
-Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters and `pmBB84WCPChannel_Choi' (yellow stars), 'pmBB84WCPChannel' (green diamonds and red circles) for different decoy-state methods.
+Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters and `pmBB84WCPChannel_Choi` (yellow stars), `pmBB84WCPChannel` (green diamonds and red circles) for different decoy-state methods.
 
 ## Figure 3
 Same as figure 2.
@@ -60,7 +60,7 @@ Same as figure 10, but each key rate curve is divided by the sigle photon probab
 #### equal intensities:
 - `pmSixStateWCP_decoy_Flag`: preset for six-state protocol with decoy state with equal intensities (clean and correct intervals)
 - `pmSixStateLossyDescription_Flag_Reduced`: description file for six-state protocol with decoy states and the flag-state squasher from Theorem 1 together with Eq. (78)
-- `pmSixStateWCPChannel_Flag_Reduced`: Channel model for six-state protocol implementing decoy analysis from Wang et. al. [2] with flag-state squasher
+- `pmSixStateWCPChannel_Flag_Reduced`: Channel model for six-state protocol implementing decoy analysis from Wang et. al. [4] with flag-state squasher
 - `pmSixStateWCPChannel_Flag_improved`: Channel model for six-state protocol using improved decoy methods with flag-state squasher
 - `pmSixStateWCPChannel_Flag_nodecoy`: Channel model for six-state protocol with no decoy intensities using results from Rusca et. al. [1], i.e. e_0 = 1/2
 
