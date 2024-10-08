@@ -2,7 +2,32 @@
 
 This is a public version of the code used in Improved Decoy-state and Flag-state Squashing Methods \[[Arxiv](https://arxiv.org/abs/2405.05069)\]. This was built for a modified version of openQKDsecurity v1.0 and all changes have been included in this repository.
 
+The functions below are required to generate the plots in the paper. For each plot we describe below whihc settings need to be chosen. For all plots the change from two to one decoy intensity is done as follows
+1. Comment out the parameters with two decoy intensities in the preset file,
+2. Comment out the variable names with two decoy intesities in the channel function,
+3. Comment out the variable 'decoys' containing two decoy intensities.
 
+## Figure 1:
+Requires functions `Main_BB84` and `pmBB84WCP_nodecoy` for the correct parameters and `pmBB84WCPChannel_constr_nodecoy` (yellow triangle), `pmBB84WCPChannel_Choi_nodecoy` (red circles) for different decoy-state methods.
+
+## Figure 2:
+Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters and `pmBB84WCPChannel_Choi' (yellow stars), 'pmBB84WCPChannel' (green diamonds and red circles) for different decoy-state methods.
+
+## Figure 3
+Same as figure 2.
+
+## Figure 7
+Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the Qubit squasher and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
+
+## Figure 8
+
+## Figure 9
+
+## Figure 10
+
+## Figure 11
+
+# Functions
 ## BB84: 
 `Main_BB84`: main file for any version of the BB84 protocol
 
