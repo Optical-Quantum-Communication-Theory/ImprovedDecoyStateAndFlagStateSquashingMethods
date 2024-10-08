@@ -17,11 +17,13 @@ Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters 
 Same as figure 2.
 
 ## Figure 7
-Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the Qubit squasher and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
+Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the Qubit squasher and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same (up to small differences) key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel_Flag_Reduced` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
 
 ## Figure 8
+`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$ and the decoy state methods from `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red stars). The file `pmSixStateWCPChannel_Flag_Reduced` is used for the standard decoy methods, creating the green circles.
 
 ## Figure 9
+
 
 ## Figure 10
 
@@ -58,6 +60,7 @@ Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct par
 - `pmSixStateLossyDescription_Flag_Reduced`: description file for six-state protocol with decoy states and the flag-state squasher from Theorem 1 together with Eq. (78)
 - `pmSixStateWCPChannel_Flag_Reduced`: Channel model for six-state protocol implementing decoy analysis from Wang et. al. with flag-state squasher
 - `pmSixStateWCPChannel_Flag_improved`: Channel model for six-state protocol using improved decoy methods with flag-state squasher
+- `pmSixStateWCPChannel_constr_nodecoy`: Channel model for six-state protocol with no decoy intensities using results from Rusca et. al., i.e. e_0 = 1/2
 
 
 #### different intensities:
