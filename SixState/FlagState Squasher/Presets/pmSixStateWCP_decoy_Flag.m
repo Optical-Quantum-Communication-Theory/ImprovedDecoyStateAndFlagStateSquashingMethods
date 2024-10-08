@@ -19,6 +19,7 @@ function [protocolDescription,channelModel,leakageEC]=setDescription()
     
     protocolDescription=str2func('pmSixStateLossyDescription_Flag_Reduced');
     channelModel=str2func('pmSixStateWCPChannel_Flag_Reduced'); %standard decoy
+    % channelModel=str2func('pmSixStateWCPChannel_Flag_nodecoy'); %no decoy
     % channelModel=str2func('pmSixStateWCPChannel_Flag_improved'); %improved decoy analysis
     leakageEC=str2func('generalEC');
 
@@ -61,7 +62,7 @@ function parameters=setParameters()
     parameters.fixed.pd = 0; %1e-6; %dark count probability
     parameters.fixed.f = 1; %error correction efficiency
     parameters.fixed.etad = 1; %detector efficiency
-    parameters.fixed.mu1 = 1; %first intensity (signal)
+    % parameters.fixed.mu1 = 0.5; %first intensity (signal)
     parameters.fixed.mu2 = 0.1; %second intensity (decoy 1)
     parameters.fixed.mu3 = 0.01; %third intensity (decoy 2)
     parameters.fixed.active = 1; %0/1 represents using passive/active detection
@@ -71,7 +72,7 @@ function parameters=setParameters()
     %optional; declaring optimizable parameters automatically invokes local search optimizers
     %must be in the format of [lowerBound, initialValue, upperBound]
     
-    %parameters.optimize.mu1 = [0.1,0.85,1]; %can optionally optimize laser intensity (need to comment it out mu1 in 'fixed' category)
+    parameters.optimize.mu1 = [0.1,0.85,1]; %can optionally optimize laser intensity (need to comment it out mu1 in 'fixed' category)
     
     
 end
