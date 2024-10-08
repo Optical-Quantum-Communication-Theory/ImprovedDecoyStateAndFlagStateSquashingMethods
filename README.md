@@ -26,8 +26,10 @@ Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct par
 `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$, commenting out all unncessary decoy intensities. The files `pmSixStateWCPChannel_Flag_improved` and  `pmSixStateWCPChannel_Flag_nodecoy` create the curves using the improved decoy methods from this work and applying $e_0 = 1/2$ from Rusca et. al., respectively.
 
 ## Figure 10
+`Main_SixState_Flag`, `pmSixStateWCP_decoy_Flag_dif_int` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$. The description file `pmSixStateLossyDescription_Flag_dif_int` and the channel `pmSixStateWCPChannel_Flag_dif_int` are required for the curves **without** a bit bias. The description file `pmSixStateLossyDescription_Flag_bit_bias` and the channel `pmSixStateWCPChannel_Flag_bit_bias` are required for the curves **with** a bit bias.
 
 ## Figure 11
+Same as figure 10, but each key rate curve is divided by the sigle photon probability.
 
 # Functions
 ## BB84: 
