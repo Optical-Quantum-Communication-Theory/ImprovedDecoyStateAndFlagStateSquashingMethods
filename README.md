@@ -19,10 +19,10 @@ The functions below are required to generate the plots in the paper. For each pl
 
 Here are the specific minor modificaitons required to reproduce the figures in the paper.
 
-### Figure 1:
+### Figure 1
 Requires functions `Main_BB84` and `pmBB84WCP_nodecoy` for the correct parameters and `pmBB84WCPChannel_constr_nodecoy` (yellow triangle), `pmBB84WCPChannel_Choi_nodecoy` (red circles) for different decoy-state methods.
 
-### Figure 2:
+### Figure 2
 Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters and `pmBB84WCPChannel_Choi` (yellow stars), `pmBB84WCPChannel` (green diamonds and red circles) for different decoy-state methods.
 
 ### Figure 3
