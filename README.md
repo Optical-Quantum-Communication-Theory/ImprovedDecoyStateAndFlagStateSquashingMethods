@@ -95,4 +95,3 @@ This figure uses the same data as figure 10, but each key rate curve is divided 
 [3] N. J. Beaudry, T. Moroder, and N. Lütkenhaus, Squashing Models for Optical Measurements in Quantum Communication, Physical Review Letters 101, 093601 (2008).
 
 [4] W. Wang and N. Lütkenhaus, Numerical security proof for the decoy-state BB84 protocol and measurement-device-independent quantum key distribution resistant against large basis misalignment, Phys. Rev. Res. 4, 043097 (2022).
-
