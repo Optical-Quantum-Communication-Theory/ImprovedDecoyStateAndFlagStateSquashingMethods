@@ -19,22 +19,22 @@ The functions below are required to generate the plots in the paper. For each pl
 2. Comment out the variable names with two decoy intesities in the channel function,
 3. Comment out the variable 'decoys' containing two decoy intensities.
 
-Here are the specific minor modificaitons required to reproduce the figures in the paper.
+Here are the specific minor modificaitons required to reproduce the data of figures in the paper.
 
 ### Figure 1
 Requires functions `Main_BB84` and `pmBB84WCP_nodecoy` for the correct parameters. For comparing different decoy methods, in the `pmBB84WCP_nodecoy` preset change the channel model to `pmBB84WCPChannel_constr_nodecoy` for the yellow triangles, and to `pmBB84WCPChannel_Choi_nodecoy` for the red circles. 
 
 ### Figure 2
-Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters and `pmBB84WCPChannel_Choi` (yellow stars), `pmBB84WCPChannel` (green diamonds and red circles) for different decoy-state methods.
+Requires functions `Main_BB84` and `pmBB84WCP_decoy` for the correct parameters. To recreate the curves using the decoy-state methods from Wang et.al. [4] change the channel to `pmBB84WCPChannel` (green diamonds and red circles) and comment out the decoy intensities appropriately. For the improved decoy methods (yellow stars) choose `pmBB84WCPChannel_Choi` in the same preset and comment out the decoy intensities appropriately.
 
 ### Figure 3
 This uses the same data as in figure 2.
 
 ### Figure 7
-Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the simple squasher [2, 3] and `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` for the decoy methods. Both will create the same (up to small differences) key rate curve (green crosses). `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ and the decoy state methods from `pmSixStateWCPChannel_Flag_Reduced` or `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds).
+Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct parameters of the qubit squasher [2, 3]. The channel models `pmSixStateWCPChannel` or `pmSixStateWCPChannel_improved_decoy` implement the decoy methods from Ref [4] and the improved decoy methods decoy methods, respectively. To change the number of decoy intensities comment out the intensities as described above. The files `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with the parameters $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$ are required for the flag-state squasher. The improved decoy methods from  `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red diamonds). Since this plot uses two decoy intensities a almost indistinguishable curve can be generated using the decoy methods from Ref [4] in `pmSixStateWCPChannel_Flag_Reduced`. To switch between any of these channel models they need to be commented out appropriately in the presets.
 
 ### Figure 8
-`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$ and the decoy state methods from `pmSixStateWCPChannel_Flag_improved` create the curve corresponding to the flag-state squasher (red stars). The file `pmSixStateWCPChannel_Flag_Reduced` is used for the standard decoy methods, creating the curve with green circles.
+`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$ setup the protocol using the flag-state squasher. The channel module `pmSixStateWCPChannel_Flag_improved` creates the curve corresponding to the improved decoy methods (red stars) and the channel module `pmSixStateWCPChannel_Flag_Reduced` is used for the standard decoy methods [4], creating the curve with green circles. Again, in the preset the channel modules and intensities have to be commented out appropriately.
 
 ### Figure 9
 `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$, commenting out all unncessary decoy intensities. The files `pmSixStateWCPChannel_Flag_improved` and  `pmSixStateWCPChannel_Flag_nodecoy` create the curves using the improved decoy methods from this work and applying $e_0 = 1/2$ from Rusca et. al. [1], respectively.
@@ -60,7 +60,7 @@ Same as figure 10, but each key rate curve is divided by the sigle photon probab
 
 ### Six-State:
 
-#### Simple squasher from Refs [2, 3]:
+#### Qubit squasher from Refs [2, 3]:
 `Main_SixState`: main file for the six-state protocol with the squashing map from Refs [2, 3]
 
 - `pmSixStateWCP_decoy`: preset for six-state protocol with decoy state
