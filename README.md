@@ -16,8 +16,8 @@ This is a public version of the code used in Improved Decoy-state and Flag-state
 
 The functions below are required to generate the plots in the paper. For each plot we describe below which settings need to be chosen. For all plots the change from two to one decoy intensity is done as follows
 1. Comment out the parameters with two decoy intensities in the preset file,
-2. Comment out the variable names with two decoy intesities in the channel function,
-3. Comment out the variable 'decoys' containing two decoy intensities.
+2. Comment out the variable names with two decoy intesities in the channel module,
+3. Comment out the variable 'decoys' containing two decoy intensities in the channel module.
 
 Here are the specific minor modificaitons required to reproduce the data of figures in the paper.
 
@@ -37,13 +37,13 @@ Requires functions `Main_SixState` and `pmSixStateWCP_decoy` for the correct par
 `Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$ setup the protocol using the flag-state squasher. The channel module `pmSixStateWCPChannel_Flag_improved` creates the curve corresponding to the improved decoy methods (red stars) and the channel module `pmSixStateWCPChannel_Flag_Reduced` is used for the standard decoy methods [4], creating the curve with green circles. Again, in the preset the channel modules and intensities have to be commented out appropriately.
 
 ### Figure 9
-`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$, commenting out all unncessary decoy intensities. The files `pmSixStateWCPChannel_Flag_improved` and  `pmSixStateWCPChannel_Flag_nodecoy` create the curves using the improved decoy methods from this work and applying $e_0 = 1/2$ from Rusca et. al. [1], respectively.
+`Main_SixState_Flag` and `pmSixStateLossyDescription_Flag_Reduced` with $p_z^A= p_z^B = 0.8, p_y^A = p_y^B = p_x^A = p_x^B = 0.1$ while commenting out all unncessary decoy intensities sets up the protocol. The channel modules `pmSixStateWCPChannel_Flag_improved` and `pmSixStateWCPChannel_Flag_nodecoy` create the curves using the improved decoy methods from this work and applying $e_0 = 1/2$ from Rusca et. al. [1], respectively.
 
 ### Figure 10
-`Main_SixState_Flag`, `pmSixStateWCP_decoy_Flag_dif_int` with $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$. The description file `pmSixStateLossyDescription_Flag_dif_int` and the channel `pmSixStateWCPChannel_Flag_dif_int` are required for the curves **without** a bit bias. The description file `pmSixStateLossyDescription_Flag_bit_bias` and the channel `pmSixStateWCPChannel_Flag_bit_bias` are required for the curves **with** a bit bias.
+This figure requires `Main_SixState_Flag` with the preset `pmSixStateWCP_decoy_Flag_dif_int` while setting $p_z^A = \dots = p_y^A = p_z^B = \dots = p_y^B = \frac{1}{3}$. The description file `pmSixStateLossyDescription_Flag_dif_int` and the channel `pmSixStateWCPChannel_Flag_dif_int` are create the curve **without** a bit bias. The description file `pmSixStateLossyDescription_Flag_bit_bias` and the channel `pmSixStateWCPChannel_Flag_bit_bias` create the curve **with** a bit bias. In both channel modules one can switch between improved decoy methods and standard decoy methods [4] by commenting out the lines 128 (w/o bit bias) or 109 (with bit bias).
 
 ### Figure 11
-Same as figure 10, but each key rate curve is divided by the sigle photon probability.
+This figure uses the same data as figure 10, but each key rate curve is divided by the sigle photon probability.
 
 ## Functions
 ### BB84: 
