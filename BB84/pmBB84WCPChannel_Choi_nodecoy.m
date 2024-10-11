@@ -192,8 +192,6 @@ end
 
 %helper function that performs decoy state analysis
 function [Y1L,Y1U] = SDP_decoy(decoys,decoy_expecfull)
-    cvx_solver Mosek
-
     n_photon=10;
     n_decoy=size(decoys,2);
     m = size(decoy_expecfull,1);
@@ -257,7 +255,8 @@ function [Y1L,Y1U] = SDP_decoy(decoys,decoy_expecfull)
             
             
             cvx_begin sdp quiet
-            %cvx_precision high
+            cvx_precision medium
+            cvx_solver Mosek
                 variable Y(m*(n_photon+1),n)
                 variable J0(3,3) hermitian semidefinite
                 variable J1(6,6) hermitian semidefinite
@@ -303,7 +302,8 @@ function [Y1L,Y1U] = SDP_decoy(decoys,decoy_expecfull)
             
             
             cvx_begin sdp quiet
-            %cvx_precision high
+            cvx_precision medium
+            cvx_solver Mosek
                 variable Y(m*(n_photon+1),n)
                 variable J0(3,3) hermitian semidefinite
                 variable J1(6,6) hermitian semidefinite
