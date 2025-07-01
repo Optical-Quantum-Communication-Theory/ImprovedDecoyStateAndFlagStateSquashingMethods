@@ -1,0 +1,40 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Improved Decoy-state and Flag-state Squashing Methods -
+  GitHub Repository
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Lars
+    family-names: Kamin
+    email: lars.kamin@outlook.com
+    affiliation: >-
+      Institute for Quantum Computing and Department of
+      Physics and Astronomy, University of Waterloo,
+      Waterloo, Ontario N2L 3G1, Canada
+    orcid: 'https://orcid.org/0000-0003-1912-3775'
+  - orcid: 'https://orcid.org/0000-0002-4897-3376'
+    given-names: Norbert
+    family-names: Lütkenhaus
+    email: lutkenhaus.office@uwaterloo.ca
+    affiliation: >-
+      Institute for Quantum Computing and Department of
+      Physics and Astronomy, University of Waterloo,
+      Waterloo, Ontario N2L 3G1, Canada
+identifiers:
+  - type: doi
+    value: 10.1103/PhysRevResearch.6.043223
+    description: Physical Review Research Publication
+repository-code: >-
+  https://github.com/Optical-Quantum-Communication-Theory/ImprovedDecoyStateAndFlagStateSquashingMethods
+abstract: >-
+  This is a public version of the code used in "Improved
+  Decoy-state and Flag-state Squashing Methods". This was
+  built for v1.0 of the Open QKD Security package.
+license: MIT
+date-released: '2024-10-11'
